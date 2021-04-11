@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  bf1942:
+    image: bf1942:latest
+    command: sh -c "/start.sh"
+    ports:
+      - 14567:14567/udp # Server
+      - 14690:14690/udp # ASE
+      - 15667:15667/udp # BFSM
+      - 22000:22000/udp # Gamespy LAN
+      - 23000:23000/udp # Gamespy
+    working_dir: /
+    volumes:
+      - bf1942-mods:/bf1942/mods/ # Persistent mods directory
+    environment:
+      BFSM: "yes"
+volumes:
+  bf1942-mods:
