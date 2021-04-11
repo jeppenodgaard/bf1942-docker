@@ -5,8 +5,7 @@ services:
     command: sh -c "/start.sh"
     ports:
       - 14567:14567/udp # Server
-      - 14690:14690/udp # ASE
-      - 15667:15667/udp # BFSM
+      - 15667:15667/tcp # BFSM
       - 22000:22000/udp # Gamespy LAN
       - 23000:23000/udp # Gamespy
     working_dir: /
