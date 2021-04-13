@@ -52,7 +52,8 @@ RUN dpkg --add-architecture i386 && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
     libc6:i386 \
     libncurses5:i386 \
-    libstdc++5:i386
+    libstdc++5:i386 \
+    nano
 
 WORKDIR /
 ADD scripts/* /

@@ -4,10 +4,6 @@ source /settings.sh
 
 # init env
 BFSM=${BFSM:-}
-LOCAL_IP=$(hostname -I | xargs)
-
-# init settings
-settings_set "game.serverIP" "${LOCAL_IP}"
 
 cd /bf1942
 

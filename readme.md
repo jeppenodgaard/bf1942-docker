@@ -19,3 +19,7 @@ docker-compose run bf1942
 
 ## Configuration
 Changes in mods folder are persistent.
+
+## Reset configurations
+THIS RESETS ALL CHANGES IN MODS FOLDER
+docker-compose down --volumes
