@@ -1,4 +1,4 @@
-# Battlefield 1942 server
+# Battlefield 1942 server in docker
 
 ## Requirements
  - docker
@@ -10,17 +10,20 @@ docker build -t bf1942 .
 ```
 
 ## Ports
-14567/udp 15667/udp 22000/udp 23000/udp
+ - 14567/udp
+ - 15667/tcp
+ - 22000/udp
+ - 23000/udp
 
 ## Run
 ```
-docker-compose run bf1942
+docker-compose up bf1942
 ```
 
-## Multiple servers
+## Multiple servers (not tested)
 ```
-docker-compose run -p 14568:14567/udp bf1942
-docker-compose run -p 14569:14567/udp bf1942
+docker-compose up -p 14568:14567/udp bf1942
+docker-compose up -p 14569:14567/udp bf1942
 ```
 
 ## Configuration
