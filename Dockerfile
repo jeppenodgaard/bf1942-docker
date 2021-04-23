@@ -15,7 +15,15 @@ RUN pip3 -q install \
 WORKDIR /bf1942
 RUN echo "Installing bf1942 1.612 server" && \
     wget -q 'http://linuxgsm.download/BattleField1942/bf1942_lnxded-1.61-hacked-to-1.612.full.tar.xz' && \
-    tar -xf 'bf1942_lnxded-1.61-hacked-to-1.612.full.tar.xz'
+    tar -xf 'bf1942_lnxded-1.61-hacked-to-1.612.full.tar.xz' && \
+    rm 'bf1942_lnxded-1.61-hacked-to-1.612.full.tar.xz'
+
+# Patched binaries from Arkyliën/Henk
+WORKDIR /bf1942_lnxded
+RUN echo "Installing bf1942_lnxded patches" && \
+    gdown -q 'https://drive.google.com/uc?id=1KllDkPW4CXsnj6sblldbSPZJWy9ObbND' && \
+    unzip 'bf1942_lnxded_patched.zip' > /dev/null && \
+    mv -f bf1942_lnxded_patched/bf1942_lnxded* /bf1942
 
 # Maps from Doubti/Mourits Google Drive
 WORKDIR /maps
