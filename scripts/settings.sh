@@ -44,6 +44,7 @@ if grep "BFSERVER" $SERVER_MANAGER > /dev/null; then
     settings_set "game.serverNumberOfRounds" 5
     settings_set "game.serverSpawnTime" 20
     settings_set "game.serverSpawnDelay" 3
+    settings_set "admin.spawnWaveTime" 3
     settings_set "game.serverGameStartDelay" 20
     settings_set "game.serverGameRoundStartDelay" 10
     settings_set "game.serverSoldierFriendlyFire" 100
