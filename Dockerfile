@@ -23,7 +23,7 @@ WORKDIR /bf1942_lnxded
 RUN echo "Installing bf1942_lnxded patches" && \
     gdown -q 'https://drive.google.com/uc?id=1KllDkPW4CXsnj6sblldbSPZJWy9ObbND' && \
     unzip 'bf1942_lnxded_patched.zip' > /dev/null && \
-    mv -f bf1942_lnxded_patched/bf1942_lnxded* /bf1942
+    install -m 775 bf1942_lnxded_patched/bf1942_lnxded* /bf1942
 
 # Maps from Doubti/Mourits Google Drive
 WORKDIR /maps
