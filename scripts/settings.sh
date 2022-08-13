@@ -38,7 +38,7 @@ if grep "BFSERVER" $SERVER_MANAGER > /dev/null; then
     settings_set "manager.consolePassword" "\"${admin_password}\""
     settings_set "game.serverDedicated" 1
     settings_set "game.serverGameTime" 20
-    settings_set "game.serverMaxPlayers" 32
+    settings_set "game.serverMaxPlayers" 64
     settings_set "game.serverScoreLimit" 0
     settings_set "game.serverInternet" 1
     settings_set "game.serverNumberOfRounds" 5
@@ -80,7 +80,7 @@ if grep "BFSERVER" $SERVER_MANAGER > /dev/null; then
     settings_set "game.serverEventLogging" 1
     settings_set "game.serverEventLogCompression" 0
     settings_set "game.objectiveAttackerTicketsMod" 100
-    settings_set "game.serverPunkBuster" 1
+    settings_set "game.serverPunkBuster" 0
     settings_set "game.serverUnpureMods" ""
 
 fi
